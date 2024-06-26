@@ -172,11 +172,13 @@ section.Produtos,#Resultados{
     margin-bottom: 60px;
     
 }
-:where(#Resultados,.Produtos) div{
+:where(#Resultados,.Produtos) div:not(:has(>button)){
     min-width: 300px;
     position: relative;
     text-align: center;
     cursor: pointer;
+    border: 2px solid #f0dfaf;
+    margin: 5px;
 }
 :where(#Resultados,.Produtos) img{
     height: 100px;
@@ -189,6 +191,10 @@ section.Produtos,#Resultados{
 .Produtos button{
     text-align: center;
     margin: 0 auto;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 20px 30px;
 }
 #ProdutoSelecionado{
     margin: 50px 0;

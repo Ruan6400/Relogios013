@@ -37,7 +37,7 @@ function windowcheck(){
     requestAnimationFrame(windowcheck)
 }
 function ProdClick(){
-    let links = document.querySelectorAll(".Produtos>div")
+    let links = document.querySelectorAll(".Produtos>div:not(:has(>button))")
     if(links != null){
         links.forEach(x=>{
             x.addEventListener('click',()=>{

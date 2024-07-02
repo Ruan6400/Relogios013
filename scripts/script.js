@@ -43,16 +43,24 @@ function ProdClick(){
             x.addEventListener('click',()=>{
                 let Dados = localStorage;
                 Dados.setItem('Produto',x.children[1].innerHTML);
+                Dados.setItem('Imagem',x.children[0].src)
+                Dados.setItem('Preco',x.children[2].innerHTML)
                 window.location.assign('produto.html')
             })
         })
     }
     
-    let txtProd = document.querySelector('#ProdutoSelecionado>h4');
+    let txtProd = document.querySelector('#ProdutoSelecionado h4');
+    let imgProd = document.querySelector('#ProdutoSelecionado img');
+    let prcProd = document.querySelector('#ProdutoSelecionado h5');
     let Dados = localStorage;
     let Txtsalvo = Dados.getItem('Produto')
-    if(Txtsalvo != null && txtProd != null){
+    let Urlimg = Dados.getItem('Imagem')
+    let txtPrc = Dados.getItem('Preco')
+    if(Txtsalvo != null && txtProd != null && Urlimg != null){
         txtProd.innerHTML = Txtsalvo
+        imgProd.src=Urlimg
+        prcProd.innerHTML = txtPrc
     }
     
 }

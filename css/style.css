@@ -131,6 +131,10 @@ div.Carrossel img,h4,p{
     margin: 0 auto;
     padding: 0;
 }
+.Carrossel h2{
+    color: #0000;
+    user-select: none;
+}
 .Carrossel~label{
     position: relative;
 }
@@ -242,6 +246,9 @@ footer p{
     input[type="search"]{
         width: 400px;
         height: 40px;
+    }
+    div.Carrossel img{
+        height: 300px;
     }
 }
 @media screen and (min-width:800px){

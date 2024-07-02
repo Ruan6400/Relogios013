@@ -125,7 +125,7 @@ function Buscar(){
     })
 }
 function Autobanner(){
-    let inputs = document.querySelectorAll('header+.Carrossel~input')
+    let inputs = document.querySelectorAll('header+section>.Carrossel~input')
     if(slide == 3){
         slide =0
     }

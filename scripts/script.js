@@ -1,14 +1,14 @@
 let num =0;
 let clicked=false;
 let Produtos = [
-    ["Produto1",150.00,"url com a imagem"],
-    ["Produto2",150.00,"url com a imagem"],
-    ["Produto3",150.00,"url com a imagem"],
-    ["Produto4",150.00,"url com a imagem"],
-    ["Produto5",150.00,"url com a imagem"],
-    ["Produto6",150.00,"url com a imagem"],
-    ["Produto7",150.00,"url com a imagem"],
-    ["Produto8",150.00,"url com a imagem"]
+    ["G-Shock GA Ferrari - preto",99.90,"img/relogios/gshockpreto.jpg"],
+    ["G-Shock Caixa de Aço Dourado",150.00,"img/relogios/gshockgold.jpg"],
+    ["G-Shock Batman Verde 45MM - A Prova d'água 10ATM",150.00,"img/relogios/gshockgreen.jpg"],
+    ["G-Shock GBX-100 Preto-Transparente",150.00,"img/relogios/gshockquadrado.jpg"],
+    ["G-Shock GBD-500 Areia",150.00,"img/relogios/begegshock.jpg"],
+    ["Casio G-Shock GA-2000-5ADR Carbon Core Guard",150.00,"img/relogios/brancoredondo.jpg"],
+    ["Casio G-Shock GA100 - Cinza",150.00,"img/relogios/cinza.jpg"],
+    ["G-Shock Frogman - Preto",150.00,"img/relogios/preto.jpg"]
 ]
 
 function ShowMenu(){
@@ -93,7 +93,7 @@ function Buscar(){
     if(resultados!=null){
         let busca = Dados.getItem("Busca")
         Produtos.forEach(x=>{
-            if(x[0].includes(busca)){
+            if(x[0].toLowerCase().includes(busca)){
                 resultados.insertAdjacentHTML('beforeend',
                     "<div>"
                         +'<img src="'+x[2]+'">'
@@ -118,7 +118,7 @@ function Buscar(){
         if(searchbox.value==""){
             alert("Digite o que você está procurando")
         }else{
-            Dados.setItem("Busca",searchbox.value)
+            Dados.setItem("Busca",searchbox.value.toLowerCase())
             window.location.assign('resultados.html')
         }
     })
@@ -135,7 +135,6 @@ function Initialize(){
     ProdClick()
     ShowSearch()
     Buscar()
-
     windowcheck()
     
 }

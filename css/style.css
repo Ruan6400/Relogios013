@@ -1,7 +1,6 @@
 /* Regras Gerais */
 body{
     margin: 0 auto;
-    font-family: 'Times New Roman'
 
 }
 button{
@@ -164,6 +163,12 @@ div.Carrossel img,h4,p{
 }
 
 
+h2:has(+.Produtos){
+    width: 100%;
+    text-align: center;
+}
+
+
 
 /* Produtos */
 section.Produtos,#Resultados{
@@ -178,11 +183,16 @@ section.Produtos,#Resultados{
     position: relative;
     text-align: center;
     cursor: pointer;
-    border: 2px solid #f0dfaf;
+    border: 5px solid #f0dfaf;
+    box-sizing: border-box;
+    padding: 2px;
     margin: 5px;
 }
 :where(#Resultados,.Produtos) img{
-    height: 100px;
+    width: 300px;
+}
+:where(#Resultados,.Produtos) h4{
+    width: 300px;
 }
 .Produtos div:has(>button){
     text-align: center;

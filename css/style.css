@@ -1,7 +1,7 @@
 /* Regras Gerais */
 body{
     margin: 0 auto;
-
+    text-align: center;
 }
 button{
     cursor: pointer;
@@ -153,11 +153,11 @@ div.Carrossel img,h4,p{
     border-radius: 50%;
     top: 0;
     left: 0;
-    background-color: blue;
+    background-color: #ddd;
     box-shadow: inset 2px 0 5px black;
 }
 .Carrossel~label:has(+input:checked)::before{
-    background-color: red;
+    background-color: #666;
 }
 .Carrossel:has(~input:nth-of-type(1):checked){
     transform: translateX(0%);
@@ -230,7 +230,43 @@ section.Produtos,#Resultados{
     text-align: center;
 }
 
-
+#Formulario{
+    display: flex;
+    justify-content: center;
+}
+form{
+    background-color: #f0dfaf;
+    max-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    border-radius: 10px;
+    border: 3px solid black;
+    margin-top: 70px;
+}
+form *{
+    flex-basis: 100%;
+    margin: 0 auto;
+    margin:  5px 100px;
+    border: none;
+}
+form input{
+    height: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+form button{
+    margin: 10px 150px;
+    padding: 10px;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+}
+textarea{
+    margin-top: 10px;
+    height: 50px;
+}
 
 /* Footer */
 footer{

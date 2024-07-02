@@ -209,11 +209,18 @@ section.Produtos,#Resultados{
 }
 #ProdutoSelecionado{
     margin: 50px 0;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 #ProdutoSelecionado img{
     width: 300px;
     height: 300px;
+}
+#ProdutoSelecionado div{
+    border: 10px solid #f0dfaf;
+    width: 300px;
+    padding: 10px;
+    text-align: center;
 }
 
 

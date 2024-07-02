@@ -256,6 +256,18 @@ footer p{
         display: inline-block;
     }
 }
+@media screen and (max-width:650px){
+    :is(.Produtos,#Resultados) div{
+        min-width: 200px;
+        width: 100px;
+    }
+    :is(.Produtos,#Resultados) img{
+        width: 180px;
+    }
+    :is(.Produtos,#Resultados) :is(p,h4){
+        width: 100px;
+    }
+}
 @media  screen and (max-width:500px) {
     header{
         background-position: 0 -200px;
@@ -338,5 +350,17 @@ footer p{
     footer{
         position: relative;
         top: 210px;
+    }
+}
+@media  screen and (max-width:420px) {
+    :is(.Produtos,#Resultados) div{
+        min-width: 180px;
+        width: 100px;
+    }
+    :is(.Produtos,#Resultados) img{
+        width: 160px;
+    }
+    :is(.Produtos,#Resultados) :is(p,h4){
+        width: 130px;
     }
 }

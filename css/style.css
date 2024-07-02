@@ -404,3 +404,15 @@ footer p{
         width: 130px;
     }
 }
+@media  screen and (max-width:380px) {
+    :is(.Produtos,#Resultados) div{
+        min-width: 160px;
+        width: 100px;
+    }
+    :is(.Produtos,#Resultados) img{
+        width: 140px;
+    }
+    :is(.Produtos,#Resultados) :is(p,h4){
+        width: 130px;
+    }
+}

@@ -129,7 +129,9 @@ function Autobanner(){
     if(slide == 3){
         slide =0
     }
-    inputs[slide].checked = true
+    if(inputs[slide]!=null){
+        inputs[slide].checked = true
+    }
     slide++
     setTimeout(Autobanner,5000)
 }

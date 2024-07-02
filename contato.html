@@ -31,21 +31,26 @@
             <a href="https://api.whatsapp.com/send?phone=13920008001" target="_blank"><button id="Whatsapp"></button></a>
         </nav>
     </header>
-
-    <form>
-        <label for="nome">Nome</label>
-        <input type="text" name="Nome" id="nome" required autofocus>
-        <label for="email">Email</label>
-        <input type="email" name="Email" id="email" required>
-        <label for="tel">Telefone</label>
-        <input type="tel" name="Telefone" id="tel">
-        <button>Enviar</button>
-    </form>
+    <section id="Formulario">
+        <form>
+            <input type="text" name="Nome" id="nome" placeholder="Digite o seu nome" required autofocus>
+            <input type="email" placeholder="Digite o seu email" name="Email" id="email" required>
+            <input type="tel" placeholder="Digite o seu telefone" name="Telefone" id="tel">
+            <textarea placeholder="Deixe uma mensagem ou feedback"></textarea>
+            <button>Enviar</button>
+        </form>
+    </section>
 
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Prog Web Design. Todos os direitos reservados.</p>
     </footer>
+    <style>
+        footer{
+            position: relative;
+            top: 100px;
+        }
+    </style>
 </body>
 </html>

@@ -1,4 +1,5 @@
 let num =0;
+let slide =0;
 let clicked=false;
 let Produtos = [
     ["G-Shock GA Ferrari - preto",99.90,"img/relogios/gshockpreto.jpg"],
@@ -123,7 +124,15 @@ function Buscar(){
         }
     })
 }
-
+function Autobanner(){
+    let inputs = document.querySelectorAll('header+.Carrossel~input')
+    if(slide == 3){
+        slide =0
+    }
+    inputs[slide].checked = true
+    slide++
+    setTimeout(Autobanner,5000)
+}
 
 
 
@@ -132,6 +141,7 @@ function Buscar(){
 function Initialize(){
     let btnmenu = document.querySelector('nav:first-of-type button')
     btnmenu.addEventListener('click',ShowMenu)
+    Autobanner()
     ProdClick()
     ShowSearch()
     Buscar()

@@ -46,6 +46,10 @@ nav:first-of-type li{
     list-style: none;
     border-radius: 6px;
 }
+nav a{
+    cursor: pointer;
+    user-select: none;
+}
 nav button{
     margin-right: 10px;
 }

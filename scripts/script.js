@@ -85,18 +85,35 @@ function ShowSearch(){
         if(window.innerWidth<1150)
             outros.forEach(x=>x.style.display="none")
     })
-
-    let btnVer = document.querySelector('.Oculto+div>button')
-    let btnOcultar = document.querySelector('.Produtos div:has(button):last-child')
-    if(btnVer != null){
-        btnVer.addEventListener('click', ()=>{
-            let itemOculto = document.querySelectorAll('.Oculto')
-            itemOculto.forEach(x=>{
-                    x.style.display = "block"
-            })
-            btnVer.parentNode.style.display="none"
+    let CaixasProduto = document.querySelectorAll('.Produtos')
+    CaixasProduto.forEach(x=>{
+        let BtnShow = x.children[x.children.length-2].children[0]
+        let BtnHide = x.children[x.children.length-1].children[0]
+        let cont = 3
+        let divOculta = x.children[x.children.length-cont]
+        BtnShow.addEventListener('click',()=>{
+            cont=3
+            divOculta = x.children[x.children.length-cont]
+            while(divOculta.classList[0] == "Oculto"){
+                divOculta.style.display = "block"
+                cont++
+                divOculta = x.children[x.children.length-cont]
+            }
+            BtnShow.parentNode.style.display = "none"
+            BtnHide.parentNode.style.display = "block"
         })
-    }
+        BtnHide.addEventListener('click',()=>{
+            cont=3
+            divOculta = x.children[x.children.length-cont]
+            while(divOculta.classList[0] == "Oculto"){
+                divOculta.style.display = "none"
+                cont++
+                divOculta = x.children[x.children.length-cont]
+            }
+            BtnShow.parentNode.style.display = "block"
+            BtnHide.parentNode.style.display = "none"
+        })
+    })
 
 }
 function Buscar(){

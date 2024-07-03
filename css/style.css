@@ -407,6 +407,9 @@ footer p{
         max-width:300px;
         justify-content:center;
     }
+    textarea{
+      min-width:200px;
+    }
     footer{
         position: relative;
         top: 210px;

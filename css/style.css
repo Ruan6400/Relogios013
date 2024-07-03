@@ -279,9 +279,12 @@ textarea{
     position: sticky;
     top: 500px;
     z-index: 100;
-}
-#Voltar a{
-    color: black;
+    background-color: black;
+    padding: 10px;
+    border: none;
+    border: 1px solid white;
+    border-radius: 15px;
+    float: right;
 }
 
 /* Footer */
@@ -402,6 +405,9 @@ footer p{
     }
     a:where(:link,:visited,:hover,:active){
         color: black;
+    }
+    #Voltar a{
+        color: white;
     }
     form{
         max-width:300px;

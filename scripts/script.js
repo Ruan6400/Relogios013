@@ -85,6 +85,19 @@ function ShowSearch(){
         if(window.innerWidth<1150)
             outros.forEach(x=>x.style.display="none")
     })
+
+    let btnVer = document.querySelector('.Oculto+div>button')
+    let btnOcultar = document.querySelector('.Produtos div:has(button):last-child')
+    if(btnVer != null){
+        btnVer.addEventListener('click', ()=>{
+            let itemOculto = document.querySelectorAll('.Oculto')
+            itemOculto.forEach(x=>{
+                    x.style.display = "block"
+            })
+            btnVer.parentNode.style.display="none"
+        })
+    }
+
 }
 function Buscar(){
     let btnsearch = document.querySelector('input[type="search"]+button')

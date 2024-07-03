@@ -214,6 +214,12 @@ section.Produtos,#Resultados{
     color: white;
     padding: 20px 30px;
 }
+.Oculto{
+    display: none;
+}
+.Produtos div:has(button):last-child{
+    display: none;
+}
 #ProdutoSelecionado{
     margin: 50px 0;
     display: flex;
@@ -266,6 +272,15 @@ form button{
 textarea{
     margin-top: 10px;
     height: 50px;
+}
+
+#Voltar{
+    position: sticky;
+    top: 500px;
+    z-index: 100;
+}
+#Voltar a{
+    color: black;
 }
 
 /* Footer */

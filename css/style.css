@@ -402,6 +402,9 @@ footer p{
     a:where(:link,:visited,:hover,:active){
         color: black;
     }
+    form{
+        max-width:300px;
+    }
     footer{
         position: relative;
         top: 210px;

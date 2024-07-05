@@ -217,6 +217,22 @@ section.Produtos,#Resultados{
 .Oculto{
     display: none;
 }
+.Produtos div:has(button):nth-last-child(2)>button{
+    background-color: #0000;
+    background-image: url(../img/verMaisMenos.png);
+    width: 173px;
+    height: 70px;
+    background-size: 400px 260px;
+    background-position: -90px -74px;
+}
+.Produtos div:has(button):last-child>button{
+    background-color: #0000;
+    background-image: url(../img/verMaisMenos.png);
+    width: 173px;
+    height: 70px;
+    background-size: 400px 260px;
+    background-position: -90px -150px;
+}
 .Produtos div:has(button):last-child{
     display: none;
 }

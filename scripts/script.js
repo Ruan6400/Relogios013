@@ -54,6 +54,7 @@ function ProdClick(){
     let txtProd = document.querySelector('#ProdutoSelecionado h4');
     let imgProd = document.querySelector('#ProdutoSelecionado img');
     let prcProd = document.querySelector('#ProdutoSelecionado h5');
+    let btnProd = document.querySelector('#ProdutoSelecionado button');
     let Dados = localStorage;
     let Txtsalvo = Dados.getItem('Produto')
     let Urlimg = Dados.getItem('Imagem')
@@ -62,6 +63,9 @@ function ProdClick(){
         txtProd.innerHTML = Txtsalvo
         imgProd.src=Urlimg
         prcProd.innerHTML = txtPrc
+    }
+    if(btnProd != null){
+        btnProd.addEventListener('click',()=>{window.location.assign("https://www.instagram.com/relogioss013/?__d=1")})
     }
     
 }

@@ -2,6 +2,7 @@
 body{
     margin: 0 auto;
     text-align: center;
+    font-family: 'Times New Roman', Times, serif;
 }
 button{
     cursor: pointer;
@@ -214,6 +215,9 @@ section.Produtos,#Resultados{
     color: white;
     padding: 20px 30px;
 }
+.Produtos button:hover{
+    transform: scale(1.1);
+}
 .Oculto{
     display: none;
 }
@@ -251,6 +255,24 @@ section.Produtos,#Resultados{
     padding: 10px;
     text-align: center;
 }
+#ProdutoSelecionado button{
+    padding: 10px 10px 10px 30px;
+    border: none;
+    background-color: black;
+    color: white;
+    background-image: url(../img/pngegg.png);
+    background-size: 30px 30px;
+    background-position: 0;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+}
+#ProdutoSelecionado button:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+
 
 #Formulario{
     display: flex;
@@ -302,6 +324,14 @@ textarea{
     border-radius: 15px;
     float: right;
 }
+#Voltar:hover{
+    background-color: white;
+    border-color: black;
+}
+#Voltar:hover a{
+    color: black;
+}
+
 
 /* Footer */
 footer{

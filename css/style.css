@@ -178,7 +178,6 @@ h2:has(+.Produtos){
 }
 
 h2:has(+.Produtos):nth-of-type(2){
-    margin-left: 100px;
 }
 
 
@@ -320,13 +319,13 @@ textarea{
 #Voltar{
     position: sticky;
     top: 500px;
+    right: 50px;
     z-index: 100;
     background-color: black;
     padding: 10px;
     border: none;
     border: 1px solid white;
     border-radius: 15px;
-    float: right;
 }
 #Voltar:hover{
     background-color: white;
@@ -382,6 +381,9 @@ footer p{
     }
 }
 @media  screen and (max-width:500px) {
+    body{
+        margin: 0 auto;
+    }
     header{
         background-position: 0 -200px;
         background-size: 450px 400px;
@@ -444,8 +446,14 @@ footer p{
         position: relative;
         top:5px
     }
+    h2:has(+.Produtos):nth-of-type(2){
+        margin: 0 auto;
+    }
     section.Produtos{
         justify-content: center;
+    }
+    button+h2+section.Produtos{
+        margin-top: 30px;
     }
     :is(.Produtos,#Resultados) div{
         min-width: 200px;

@@ -1,6 +1,7 @@
 /* Regras Gerais */
 body{
     margin-block: 0 auto;
+    margin: 0 auto;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
 }
